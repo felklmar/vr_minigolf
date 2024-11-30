@@ -13,14 +13,10 @@ public class ActivateTeleportationRay : MonoBehaviour
     public InputActionProperty rightActive;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    void Start() {}
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         leftTeleportation.SetActive( leftActive.action.ReadValue<float>() > 0.1f );
         rightTeleportation.SetActive( rightActive.action.ReadValue<float>() > 0.1f ); 
     }
