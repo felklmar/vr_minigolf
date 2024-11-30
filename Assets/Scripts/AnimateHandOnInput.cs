@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class AnimateHandOnInput : MonoBehaviour
 {
-    public InputActionProperty pinch_animation_action; 
-    public InputActionProperty grip_animation_action;
-    public Animator hand_animator;
+    public InputActionProperty pinchAnimationAction; 
+    public InputActionProperty gripAnimationAction;
+    public Animator handAnimator;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +19,11 @@ public class AnimateHandOnInput : MonoBehaviour
     void Update()
     {
         // Get the trigger value from controller and pass it to animator
-        float trigger_value = pinch_animation_action.action.ReadValue<float>();
-        hand_animator.SetFloat( "Trigger", trigger_value );
+        float triggerValue = pinchAnimationAction.action.ReadValue<float>();
+        handAnimator.SetFloat( "Trigger", triggerValue );
 
         // Get the grip value from controller and pass it to animator
-        float grip_value = grip_animation_action.action.ReadValue<float>();
-        hand_animator.SetFloat( "Grip", grip_value );
+        float gripValue = gripAnimationAction.action.ReadValue<float>();
+        handAnimator.SetFloat( "Grip", gripValue );
     }
 }

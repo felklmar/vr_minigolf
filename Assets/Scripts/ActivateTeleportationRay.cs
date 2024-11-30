@@ -6,11 +6,11 @@ using UnityEngine.InputSystem;
 
 public class ActivateTeleportationRay : MonoBehaviour
 {
-    public GameObject left_teleportation;
-    public GameObject right_teleportation;
+    public GameObject leftTeleportation;
+    public GameObject rightTeleportation;
 
-    public InputActionProperty left_active;
-    public InputActionProperty right_active;
+    public InputActionProperty leftActive;
+    public InputActionProperty rightActive;
 
     // Start is called before the first frame update
     void Start()
@@ -21,7 +21,7 @@ public class ActivateTeleportationRay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        left_teleportation.SetActive( left_active.action.ReadValue<float>() > 0.1f );
-        right_teleportation.SetActive( right_active.action.ReadValue<float>() > 0.1f ); 
+        leftTeleportation.SetActive( leftActive.action.ReadValue<float>() > 0.1f );
+        rightTeleportation.SetActive( rightActive.action.ReadValue<float>() > 0.1f ); 
     }
 }
