@@ -5,21 +5,29 @@ using UnityEngine.InputSystem;
 
 public class AnimateHandOnInput : MonoBehaviour
 {
-    public InputActionProperty pinchAnimationAction; 
-    public InputActionProperty gripAnimationAction;
-    public Animator handAnimator;
+    public InputActionReference gripInputActionReference, triggerInputActionReference;
+
+    private Animator _handAnimator;
+    private float _gripValue, _triggerValue;
 
     // Start is called before the first frame update
-    void Start() {}
+    void Start() {
+        _handAnimator = GetComponentInChildren<Animator>();
+    }
 
     // Update is called once per frame
     void Update() {
-        // Get the trigger value from controller and pass it to animator
-        float triggerValue = pinchAnimationAction.action.ReadValue<float>();
-        handAnimator.SetFloat( "Trigger", triggerValue );
+        AnimateGrip();
+        AnimateTrigger();
+    }
 
-        // Get the grip value from controller and pass it to animator
-        float gripValue = gripAnimationAction.action.ReadValue<float>();
-        handAnimator.SetFloat( "Grip", gripValue );
+    private void AnimateGrip() {
+        _gripValue = gripInputActionReference.action.ReadValue<float>();
+        _handAnimator.SetFloat( "Grip", _gripValue );
+    }
+
+    private void AnimateTrigger() {
+        _triggerValue = triggerInputActionReference.action.ReadValue<float>();
+        _handAnimator.SetFloat( "Trigger", _triggerValue );
     }
 }
