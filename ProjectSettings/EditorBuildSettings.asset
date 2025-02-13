@@ -6,8 +6,35 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Courses/01.unity
+    guid: 75b2045669976074c87a76fee337ab26
+  - enabled: 1
+    path: Assets/Scenes/Courses/02.unity
+    guid: 7b05739181d3bab479ee0c090a426777
+  - enabled: 1
+    path: Assets/Scenes/Courses/03.unity
+    guid: c335da4b0a70fbd4ca029d30b4a5dbe6
+  - enabled: 1
+    path: Assets/Scenes/Courses/04.unity
+    guid: 2178a819a09b8424bbedc1b081be6ebe
+  - enabled: 1
+    path: Assets/Scenes/Courses/05.unity
+    guid: de62cc89e0416e94fb2580bc9defebe5
+  - enabled: 1
+    path: Assets/Scenes/Courses/06.unity
+    guid: e7d58fbc7ea7e0d42b873b3396274178
+  - enabled: 1
+    path: Assets/Scenes/Courses/07.unity
+    guid: dbc92c514854bfc42ab0a50f28ed5bf9
+  - enabled: 1
+    path: Assets/Scenes/Courses/08.unity
+    guid: e1cdd5e598d16c6459bcbe9fa438fa99
+  - enabled: 1
+    path: Assets/Scenes/Courses/09.unity
+    guid: d2300b36f2a9349469e621d3e5bca7b1
+  - enabled: 1
+    path: Assets/Scenes/Courses/10.unity
+    guid: d92731f1e2499394cb9273686a7462f9
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b4204ffc6542baf4ba385386e54b3dc1,
       type: 2}
